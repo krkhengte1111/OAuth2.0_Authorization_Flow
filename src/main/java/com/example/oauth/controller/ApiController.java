@@ -21,6 +21,7 @@ public class ApiController {
     private OAuth2AuthorizedClientService authorizedClientService;
     @GetMapping("/login")
     public String login(){
+        System.out.println("welcome to krk branch");
         return "OAuth login successfully";
     }
 
