@@ -21,7 +21,7 @@ public class ApiController {
     private OAuth2AuthorizedClientService authorizedClientService;
     @GetMapping("/login")
     public String login(){
-        return "OAuth login";
+        return "OAuth login successfully";
     }
 
     private static final Logger logger = LoggerFactory.getLogger(ApiController.class);
