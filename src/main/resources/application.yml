@@ -1,0 +1,20 @@
+server:
+  port: 9090
+
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          github:  # Correct provider name
+            client-id: Ov23liNWUKvcZkNL0vdr  # Replace with your actual GitHub client ID
+            client-secret: 290141b1ae3ffc9e74e4d0b1f739688083886e86  # Replace with your actual GitHub client secret
+            scope: name
+            redirect-uri: "http://localhost:9090/login/oauth2/code/github"  # Corrected port
+            authorization-grant-type: authorization_code
+        provider:
+          github:  # Correct provider name
+            authorization-uri: "https://github.com/login/oauth/authorize"
+            token-uri: "https://github.com/login/oauth/access_token"
+            user-info-uri: "https://api.github.com/user"
+            user-name-attribute: name  # Optional: Attribute to map the user's name
